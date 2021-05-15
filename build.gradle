@@ -11,7 +11,6 @@ buildscript {
 }
 
 apply plugin: 'net.minecraftforge.gradle.forge'
-<<<<<<< HEAD
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
@@ -22,22 +21,11 @@ archivesBaseName = "NoMoreRecipeConflict"
 version = "0.13"
 sourceCompatibility = targetCompatibility = javaVer
 
-=======
-//Only edit below this line, the above code adds and enables the necessary things for Forge to be setup.
-
-
-version = "0.8"
-group = "assets.recipehandler" // http://maven.apache.org/guides/mini/guide-naming-conventions.html
-archivesBaseName = "NoMoreRecipeConflict"
-
-sourceCompatibility = targetCompatibility = "1.6" // Need this here so eclipse task generates correctly.
->>>>>>> ef4bbe7f0f171d6970da92b027f1de1a5d6f7bc5
 compileJava {
 	sourceCompatibility = targetCompatibility = javaVer
 }
 
 minecraft {
-<<<<<<< HEAD
 	version = "1.12.2-14.23.4.2745"
 	runDir = "eclipse"
 	mappings = "snapshot_20180801"
@@ -71,47 +59,4 @@ jar {
 	//Append with minecraft version
 	classifier = "(${minecraft.version})"
 	archiveName = "${archivesBaseName}-${version}${classifier}.${extension}"
-=======
-    version = "1.11.2-13.20.0.2228"
-    runDir = "run"
-
-    // the mappings can be changed at any time, and must be in the following format.
-    // snapshot_YYYYMMDD   snapshot are built nightly.
-    // stable_#            stables are built at the discretion of the MCP team.
-    // Use non-default mappings at your own risk. they may not always work.
-    // simply re-run your setup task after changing the mappings to update your workspace.
-    mappings = "snapshot_20170310"
-    replace '$version', project.version
-    replace '$mcversion', "[1.11,)"
-    makeObfSourceJar = false
-}
-
-dependencies {
-}
-
-jar {
-    //Keep the jar as clean as possible
-    includeEmptyDirs = false
-    //Append with minecraft version
-    version = version + "(" + minecraft.version + ")"
-}
-
-processResources {
-    // this will ensure that this task is redone when the versions change.
-    inputs.property "version", project.version
-    inputs.property "mcversion", project.minecraft.version
-
-    // replace stuff in mcmod.info, nothing else
-    from(sourceSets.main.resources.srcDirs) {
-        include 'mcmod.info'
-
-        // replace version and mcversion
-        expand 'version':project.version, 'mcversion':project.minecraft.version
-    }
-
-    // copy everything else except the mcmod.info
-    from(sourceSets.main.resources.srcDirs) {
-        exclude 'mcmod.info'
-    }
->>>>>>> ef4bbe7f0f171d6970da92b027f1de1a5d6f7bc5
 }
