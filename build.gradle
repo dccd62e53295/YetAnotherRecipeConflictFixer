@@ -14,11 +14,11 @@ apply plugin: 'net.minecraftforge.gradle.forge'
 apply plugin: 'eclipse'
 apply plugin: 'idea'
 
-def mcversion = "[1.12,)"
+def mcversion = "[1.12)"
 def javaVer = '1.8'
 
-archivesBaseName = "NoMoreRecipeConflict"
-version = "0.13"
+archivesBaseName = "YARCF"
+version = "0.14"
 sourceCompatibility = targetCompatibility = javaVer
 
 compileJava {
