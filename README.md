@@ -1,6 +1,6 @@
 ###This is a Minecraft modification based on Minecraft Forge
-[![CurseForge](http://cf.way2muchnoise.eu/full_stimmedcow-nomorerecipeconflict_downloads.svg)](https://minecraft.curseforge.com/projects/stimmedcow-nomorerecipeconflict)
-[![CurseForge](http://cf.way2muchnoise.eu/versions/stimmedcow-nomorerecipeconflict.svg)](https://minecraft.curseforge.com/projects/stimmedcow-nomorerecipeconflict/files)
+
+This has been updated for minecraft 1.12.2 Combining some community made changes and restoring the CurseForge page.
 
 If you have two different mods that have the same recipe using the same materials, then you got a conflict, and you would have no way to get access to all the items by the intended means.
 
