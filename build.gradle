@@ -53,10 +53,20 @@ processResources {
 	}
 }
 
+task deobfJar(type: Jar) {
+    from sourceSets.main.output
+    classifier = 'deobf'
+}
+
 jar {
 	//Keep the jar as clean as possible
 	includeEmptyDirs = false
 	//Append with minecraft version
-	classifier = "(${minecraft.version})"
-	archiveName = "${archivesBaseName}-${version}${classifier}.${extension}"
+	classifier = "reobf"
+	//archiveName = "${archivesBaseName}-${version}${classifier}.${extension}"
+}
+
+artifacts {
+    archives deobfJar
+    archives jar
 }
